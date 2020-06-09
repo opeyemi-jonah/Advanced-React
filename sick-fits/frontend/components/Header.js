@@ -1,6 +1,18 @@
-import Nav from './Nav'
-import Link from 'next/link'
+import Nav from './Nav';
+import Link from 'next/link';
 import styled from 'styled-components'
+import Router from 'next/router';
+import NProgress from 'nprogress';
+
+Router.onRouteChangeStart =()=>{
+    console.log('onRouteChange Triggered')
+}
+Router.onRouteChangeComplete =()=>{
+    console.log('onRouteComplete Triggered')
+}
+Router.onRouteChangeError =()=>{
+    console.log('onRouteError Triggered')
+}
 
 const Logo = styled.h1`
 font-size: 4rem;
@@ -47,11 +59,12 @@ const StyledHeader = styled.header`
 <div>
         <div className="bar">
             <Logo>
-            <Link>
-            <a href ="/">Jonah Wears</a>
+
+            <Link href="/">
+            <a>Jonah Wears</a>
             </Link>
+           
             </Logo>
-            
             <Nav />
         </div>
         <div className="sub-bar">

@@ -5,7 +5,7 @@ const Home =props=>(
 
    
 
-<p>Hello!</p>
+<p>Hello! I'm Just the homepage</p>
 
 
     </div>
